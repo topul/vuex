@@ -26,6 +26,7 @@ export default class ModuleCollection {
   }
 
   register (path, rawModule, runtime = true) {
+    console.log('🚀 ~ file: module-collection.js ~ line 29 ~ ModuleCollection ~ register ~ rawModule', rawModule)
     if (__DEV__) {
       assertRawModule(path, rawModule)
     }

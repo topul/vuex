@@ -4,6 +4,7 @@ import ModuleCollection from './module/module-collection'
 import { forEachValue, isObject, isPromise, assert, partial } from './util'
 
 let Vue // bind on install
+console.log('🚀 ~ file: store.js ~ line 7 ~ Vue', Vue)
 
 export class Store {
   constructor (options = {}) {
