@@ -1,0 +1,82 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "源码分析",
+  "steps": [
+    {
+      "file": "src/store.js",
+      "description": "定义局部 Vue 变量，用于判断是否已经装载和减少全局作用域查找",
+      "line": 6
+    },
+    {
+      "file": "src/store.js",
+      "description": "将Vuex混入到Vue实例的beforeCreate生命周期中",
+      "line": 549
+    },
+    {
+      "file": "src/mixin.js",
+      "description": "根据Vue版本执行不同的混入逻辑",
+      "line": 4
+    },
+    {
+      "file": "src/mixin.js",
+      "description": "如果有options.store，说明是根实例",
+      "line": 25
+    },
+    {
+      "file": "src/store.js",
+      "description": "若处于浏览器环境且加载过Vue，则执行install方法",
+      "line": 13
+    },
+    {
+      "file": "src/mixin.js",
+      "description": "否则就取得父元素的$store挂载",
+      "line": 30
+    },
+    {
+      "file": "src/store.js",
+      "description": "收集module配置",
+      "line": 34
+    },
+    {
+      "file": "src/store.js",
+      "description": "根state为收集到的module根root的state",
+      "line": 53
+    },
+    {
+      "file": "src/store.js",
+      "description": "设置dispatch方法",
+      "line": 43
+    },
+    {
+      "file": "src/store.js",
+      "description": "设置commit方法",
+      "line": 46
+    },
+    {
+      "file": "src/store.js",
+      "description": "初始化根模块及子模块",
+      "line": 58
+    },
+    {
+      "file": "src/store.js",
+      "description": "初始化store vm，并设置响应式。并将_wrappedGetters设置为计算属性",
+      "line": 62
+    },
+    {
+      "file": "src/store.js",
+      "description": "将state变成响应式",
+      "line": 306
+    },
+    {
+      "file": "src/store.js",
+      "description": "执行插件程序",
+      "line": 65
+    },
+    {
+      "file": "src/store.js",
+      "description": "设置开发者工具",
+      "line": 67
+    }
+  ],
+  "ref": "dev"
+}

@@ -26,15 +26,15 @@ export class Store {
     } = options
 
     // store internal state
-    this._committing = false
-    this._actions = Object.create(null)
-    this._actionSubscribers = []
-    this._mutations = Object.create(null)
-    this._wrappedGetters = Object.create(null)
-    this._modules = new ModuleCollection(options)
-    this._modulesNamespaceMap = Object.create(null)
-    this._subscribers = []
-    this._watcherVM = new Vue()
+    this._committing = false  // 是否在进行状态提交标识
+    this._actions = Object.create(null) // actions操作对象
+    this._actionSubscribers = [] // action订阅集合
+    this._mutations = Object.create(null) // mutations操作对象
+    this._wrappedGetters = Object.create(null) // 封装后的getters集合对象
+    this._modules = new ModuleCollection(options) // Vuex支持store分模块传入，存储分析后的modules
+    this._modulesNamespaceMap = Object.create(null) // 模块命名空间map
+    this._subscribers = [] // 订阅函数集合，Vuex提供了subscribe功能
+    this._watcherVM = new Vue() // Vue组件用于watch监听变化
     this._makeLocalGettersCache = Object.create(null)
 
     // bind commit and dispatch to self
